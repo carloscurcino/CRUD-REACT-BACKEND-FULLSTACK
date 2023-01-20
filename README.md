@@ -1,6 +1,6 @@
 # CRUD FULLSTACK Using REACT, EXPRESS/NODE, MYSQL
 ps: This is the back-end repository.<br>
-link front-end: https://github.com/carloscurcino/CRUD-REACT-BACKEND-FULLSTACK <br><br>
+link front-end: https://github.com/carloscurcino/CRUD-REACT-FULLSTACK <br><br>
 This project was made with base in the video of Will Dev. In this project I created a crud fullstack.
 The tecnologies bellow was used:<br>
 -React to frontend.<br>
