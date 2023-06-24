@@ -1,7 +1,7 @@
 import { db } from "../db.js";
 
-export const getUsers = (_, res) => {
-  const q = "SELECT * FROM usuarios";
+export const getUsers = async (_, res) => {
+  const q = await "SELECT * FROM usuarios";
 
   db.query(q, (err, data) => {
     if (err) return res.json(err);
@@ -10,8 +10,8 @@ export const getUsers = (_, res) => {
   });
 };
 
-export const addUser = (req, res) => {
-  const q =
+export const addUser = async (req, res) => {
+  const q = await
     "INSERT INTO usuarios(`nome`, `email`, `fone`, `data_nascimento`) VALUES(?)";
 
   const values = [
@@ -28,8 +28,8 @@ export const addUser = (req, res) => {
   });
 };
 
-export const updateUser = (req, res) => {
-  const q =
+export const updateUser = async (req, res) => {
+  const q = await
     "UPDATE usuarios SET `nome` = ?, `email` = ?, `fone` = ?, `data_nascimento` = ? WHERE `id` = ?";
 
   const values = [
@@ -46,8 +46,8 @@ export const updateUser = (req, res) => {
   });
 };
 
-export const deleteUser = (req, res) => {
-  const q = "DELETE FROM usuarios WHERE `id` = ?";
+export const deleteUser = async (req, res) => {
+  const q = await "DELETE FROM usuarios WHERE `id` = ?";
 
   db.query(q, [req.params.id], (err) => {
     if (err) return res.json(err);
